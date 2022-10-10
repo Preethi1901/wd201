@@ -29,12 +29,13 @@ http
     let url = request.url;
     response.writeHeader(200, { "Content-Type": "text/html" });
     switch (url) {
-      case "/registration":
-        response.write(registrationContent);
-        response.end();
-        break;
+      
       case "/project":
         response.write(projectContent);
+        response.end();
+        break;
+        case "/registration":
+        response.write(registrationContent);
         response.end();
         break;
       default:
